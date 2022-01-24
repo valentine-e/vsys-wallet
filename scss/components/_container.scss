@@ -10,3 +10,13 @@
     width: calc(100% - 256px);
   }
 }
+
+@media screen and (max-width: 767px) {
+  .content-container {
+    width: calc(100% - 256px);
+
+    .side-menu.is-open + & {
+      width: calc(100% - 100px);
+    }
+  }
+}
