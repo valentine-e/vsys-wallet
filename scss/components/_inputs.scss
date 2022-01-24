@@ -1,0 +1,119 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input {
+  padding: 4px 8px;
+}
+
+.form-control {
+  padding: 4px 8px;
+  background-color: var(--secondary-bcg-color-grey01);
+  border: none;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.04);
+
+  //   &:valid {
+  //     outline: 1px solid var(--success-color);
+  //   }
+
+  //   &:invalid {
+  //     outline: 1px solid var(--danger-color);
+  //   }
+
+  &::placeholder {
+    color: var(--input-placeholder-color-grey05);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-bcg-color-grey01);
+    outline: 1px solid #9ec5fe;
+    box-shadow: none;
+  }
+
+  &:hover:disabled {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: var(--grey-02);
+    color: var(--inactive-text-color-grey04);
+    box-shadow: none;
+  }
+}
+
+.form-select {
+  border-radius: 100px;
+  padding: 8px 32px 8px 8px;
+  outline: 1px solid var(--grey-02);
+  background-color: var(--secondary-bcg-color-grey01);
+
+  option:disabled {
+    color: var(--input-placeholder-color-grey05);
+  }
+
+  &:hover {
+    outline: 1px solid var(--hover-btn-color);
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline: 1px solid var(--focus-btn-color);
+    box-shadow: none;
+  }
+
+  &:active {
+    background: var(--grey-02);
+    outline: 1px solid #dee2e6;
+  }
+
+  &:disabled {
+    background-color: var(--grey-02);
+    color: var(--inactive-text-color-grey04);
+  }
+}
+
+.form-check-input {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: var(--secondary-bcg-color-grey01);
+
+  outline: 1px solid var(--input-placeholder-color-grey05);
+
+  &:not(:checked):focus {
+    outline: 1px solid var(--input-placeholder-color-grey05);
+  }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid #0a58ca;
+    box-shadow: none;
+  }
+
+  &:active {
+    background-color: var(--inactive-text-color-grey04);
+  }
+
+  &:checked:hover {
+    background-color: var(--hover-btn-color);
+  }
+
+  &:disabled {
+    background: var(--grey-02);
+    outline: 1px solid var(--inactive-text-color-grey04);
+  }
+
+  &:disabled:hover {
+    background-color: var(--inactive-text-color-grey04);
+  }
+}
+
+.form-check-input[type="checkbox"] {
+  border-radius: initial;
+}

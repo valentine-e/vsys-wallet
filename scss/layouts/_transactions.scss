@@ -1,0 +1,39 @@
+.transactions-title {
+  padding-top: 96px;
+  padding-bottom: 25px;
+}
+
+.transactions-settings-table {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-row-gap: 16px;
+}
+
+.transactions-select {
+  width: 161px;
+}
+
+.transactions-address-input {
+  max-width: 360px;
+}
+
+.transactions-invoice-input {
+  max-width: 106px;
+}
+
+.transactions-data-table {
+  font-size: 10px;
+
+  thead {
+    border-bottom: 1px solid var(--grey-02);
+  }
+
+  th,
+  td {
+    padding: 14px 16px;
+  }
+
+  .table-subtitle {
+    color: var(--input-placeholder-color-grey05);
+  }
+}

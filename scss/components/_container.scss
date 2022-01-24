@@ -1,0 +1,12 @@
+.content-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  min-height: 100vh;
+  width: calc(100% - 100px);
+  transition: width 250ms linear;
+
+  .side-menu.is-open + & {
+    width: calc(100% - 256px);
+  }
+}

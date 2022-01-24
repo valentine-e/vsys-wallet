@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VSYS Wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <aside
+        data-menu
+        class="side-menu is-open d-flex flex-column justify-content-between"
+      >
+        <div class="arrow-button-wrapper w-100">
+          <button data-menu-button type="button" class="arrow-button btn">
+            <svg width="32" height="32" class="arrow">
+              <use href="images/icons.svg#menu-arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./wallets.html" class="nav-link nav-link--active">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-wallets"></use>
+                </svg>
+                <span class="nav-label">Wallets</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./source-of-rates.html" class="nav-link">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-source-rates"></use>
+                </svg>
+                <span class="nav-label">Source of rates</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./transactions.html" class="nav-link">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-transactions"></use>
+                </svg>
+                <span class="nav-label">Transactions</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-logout"></use>
+                </svg>
+                <span class="nav-label">Log out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logo-thumb">
+          <img
+            class="menu-logo-big menu-logo align-self-center"
+            width="151"
+            src="./images/vsys-logo.png"
+            alt=""
+          />
+          <img
+            class="menu-logo-small menu-logo align-self-center"
+            width="80"
+            src="./images/vsys-logo-small.png"
+            alt=""
+          />
+        </div>
+      </aside>
+
+      <div class="px-5 py-4 content-container">
+        <div class="row">
+          <div class="col">
+            <h1 class="title-text">Bitcoin wallet</h1>
+          </div>
+        </div>
+        <div class="text-nowrap wallet-grid--wrap">
+          <div>
+            <h2 class="subtitle-text mb-4">Bitcoin wallet</h2>
+            <div class="d-flex ps-4">
+              <div>
+                <p class="common-text mb-3">Host name:</p>
+                <p class="common-text mb-3">Blockchain key:</p>
+                <a href="#" class="common-text mb-3 accent-text"
+                  >Test connection</a
+                >
+              </div>
+              <div class="ps-4">
+                <p class="common-text mb-3">Bitcoin</p>
+                <a href="#" class="common-text mb-3 accent-text">Upload</a>
+                <p class="common-text inactive-text mb-3">Server offline</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="subtitle-text mb-4">Bitcoin wallet</h2>
+            <div class="d-flex ps-4">
+              <div>
+                <p class="common-text mb-3">Status:</p>
+                <p class="common-text mb-3">Private Key:</p>
+                <p class="common-text mb-3">API URL:</p>
+                <p class="common-text">API Token::</p>
+              </div>
+              <div class="ps-4">
+                <a href="#" class="common-text mb-3 accent-text">Activate</a>
+                <div class="d-flex">
+                  <a href="#" class="common-text mb-3 inactive-link"
+                    >Doesn’t exist</a
+                  >
+                  <a href="#" class="common-text mb-3 ms-2 accent-text"
+                    >Upload</a
+                  >
+                  <a href="#" class="common-text mb-3 ms-2 accent-text"
+                    >Generate</a
+                  >
+                </div>
+                <p class="common-text mb-3">
+                  https://whatever.com/rest/api/2/myself
+                </p>
+                <div class="d-flex">
+                  <p class="common-text">
+                    zaCELgL. 0imfnc8mVLWwsAawjYr4Rx-Af50DDqtlx
+                  </p>
+                  <a href="#" class="common-text ms-2 accent-text">Generate</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="subtitle-text mb-4">Autopayout Policy</h2>
+
+            <div class="autopayout-grid common-text ps-4">
+              <div><p>Destanation:</p></div>
+              <div>
+                <select class="form-select common-text autopayout-destination">
+                  <option selected>39R4GFGNgdQB9cSfEDvr5DPn85nLexE4fp</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                </select>
+              </div>
+
+              <div><p>Add adress:</p></div>
+              <div>
+                <div class="d-flex">
+                  <input
+                    placeholder="placeholder"
+                    class="form-control common-text"
+                    type="text"
+                  />
+                  <a
+                    href="#"
+                    class="btn p-0 common-text accent-text text-nowrap ms-2"
+                  >
+                    + Add
+                  </a>
+                </div>
+              </div>
+
+              <div><p>Fee:</p></div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <input
+                    value="0,00000001"
+                    class="fee-input form-control common-text"
+                    type="text"
+                  />
+                  <p class="ms-2">BTC</p>
+                </div>
+              </div>
+
+              <div><p>Autopayout:</p></div>
+              <div><p class="success-text">On</p></div>
+
+              <div><p>Policy:</p></div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <select class="form-select form-select--width common-text">
+                    <option selected>schedule</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                  </select>
+                  <p class="common-text text-nowrap mx-2">once per</p>
+                  <select class="form-select form-select--width common-text">
+                    <option selected>15 min</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="invisible subtitle-text mb-4">Autopayout Policy</h2>
+
+            <div class="common-text ps-4 autopayout-grid">
+              <div>
+                <p>
+                  Mark invoice as partually paid <br />
+                  if payment amount is less then:
+                </p>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <input
+                    class="form-control common-text autopayout-input"
+                    type="number"
+                  />
+                  <p class="ps-2 common-text">%</p>
+                </div>
+              </div>
+
+              <div>
+                <p>
+                  Add fee to clients credit <br />
+                  if payment amount more then:
+                </p>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <input
+                    class="form-control common-text autopayout-input"
+                    type="number"
+                  />
+                  <p class="ps-2 common-text">%</p>
+                </div>
+              </div>
+
+              <div><p>Recalculate invoice rate after</p></div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <input
+                    class="form-control common-text autopayout-input me-2"
+                    type="number"
+                  />
+
+                  <select
+                    class="form-select form-select--width common-text"
+                    name=""
+                    id=""
+                  >
+                    <option selected>Day(s)</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex align-items-center transactions-number">
+                <p class="common-text">
+                  Number of confirmation needed for transaction
+                </p>
+                <button class="btn" type="button">
+                  <svg width="8px" height="8px">
+                    <use href="./images/icons.svg#arrow-left-icon"></use>
+                  </svg>
+                </button>
+                <input
+                  class="form-control common-text autopayout-input"
+                  type="number"
+                />
+                <button class="btn" type="button">
+                  <svg class="arrow-right-icon" width="8px" height="8px">
+                    <use href="./images/icons.svg#arrow-left-icon"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col d-flex justify-content-end">
+            <button type="button" class="button btn me-3">Save</button>
+            <button type="button" class="button btn button-secondary">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

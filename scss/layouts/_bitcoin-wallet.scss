@@ -1,0 +1,32 @@
+.wallet-grid--wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 70px;
+  grid-row-gap: 20px;
+}
+
+.autopayout-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  grid-gap: 16px;
+}
+
+.transactions-number {
+  grid-column: 1/3;
+}
+.arrow-right-icon {
+  transform: rotate(180deg);
+}
+
+.autopayout-input {
+  width: 40px;
+}
+
+.fee-input {
+  width: 90px;
+}
+
+.form-select--width {
+  width: 130px;
+}

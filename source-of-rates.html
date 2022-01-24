@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VSYS Wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <aside
+        data-menu
+        class="side-menu is-open d-flex flex-column justify-content-between"
+      >
+        <div class="arrow-button-wrapper w-100">
+          <button data-menu-button type="button" class="arrow-button btn">
+            <svg width="32" height="32" class="arrow">
+              <use href="images/icons.svg#menu-arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./wallets.html" class="nav-link">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-wallets"></use>
+                </svg>
+                <span class="nav-label">Wallets</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="./source-of-rates.html"
+                class="nav-link nav-link--active"
+              >
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-source-rates"></use>
+                </svg>
+                <span class="nav-label">Source of rates</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./transactions.html" class="nav-link">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-transactions"></use>
+                </svg>
+                <span class="nav-label">Transactions</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-logout"></use>
+                </svg>
+                <span class="nav-label">Log out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logo-thumb">
+          <img
+            class="menu-logo-big menu-logo align-self-center"
+            width="151"
+            src="./images/vsys-logo.png"
+            alt=""
+          />
+          <img
+            class="menu-logo-small menu-logo align-self-center"
+            width="80"
+            src="./images/vsys-logo-small.png"
+            alt=""
+          />
+        </div>
+      </aside>
+      <form action="post " class="px-5 py-4 content-container">
+        <div class="row">
+          <div class="col">
+            <h1 class="title-text">Source of rates</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="source-grid text-nowrap">
+              <div><p class="common-text">Bitcoin rate</p></div>
+              <div class="d-flex align-items-center">
+                <p class="common-text me-3">Source of rate:</p>
+                <select
+                  name="bitcoin-rate"
+                  class="form-select form-select-sm common-text"
+                >
+                  <option value="bitrix">Bitrix binance</option>
+                  <option value="manual">Manual</option>
+                  <option value="custom">Custom</option>
+                </select>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <p class="common-text">$</p>
+                  <input
+                    name="bitcoin-manual-price"
+                    class="form-control form-control-sm common-text source-manual-price mx-2"
+                    type="number"
+                  />
+                  <p class="common-text">per coin</p>
+                </div>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <p class="common-text">Added fee:</p>
+                  <input
+                    placeholder="00"
+                    name="bitcoin-added-fee"
+                    class="form-control form-control-sm source-added-input common-text mx-2"
+                    type="number"
+                  />
+                  <p class="common-text">% to rates</p>
+                </div>
+              </div>
+              <div>
+                <p class="common-text">
+                  Current rate:
+                  <span data-bitcoin-current-rate>$22.345,23</span> per Btc
+                </p>
+              </div>
+
+              <div><p class="common-text">Litecoin rate</p></div>
+              <div class="d-flex align-items-center">
+                <p class="common-text me-3">Source of rate:</p>
+                <select
+                  name="litecoin-rate"
+                  class="form-select form-select-sm common-text"
+                >
+                  <option value="bitrix">Bitrix binance</option>
+                  <option selected value="manual">Manual</option>
+                  <option value="custom">Custom</option>
+                </select>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <p class="common-text">$</p>
+                  <input
+                    value="10000.56"
+                    name="litecoin-manual-price"
+                    class="form-control form-control-sm common-text source-manual-price mx-2"
+                    type="number"
+                  />
+                  <p class="common-text">per coin</p>
+                </div>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <p class="common-text">Added fee:</p>
+                  <input
+                    value="05"
+                    placeholder="00"
+                    name="litecoin-added-fee"
+                    class="form-control form-control-sm source-added-input common-text mx-2"
+                    type="number"
+                  />
+                  <p class="common-text">% to rates</p>
+                </div>
+              </div>
+              <div>
+                <p class="common-text">
+                  Current rate:
+                  <span data-litecoin-current-rate>$15.678,45</span> per Ltc
+                </p>
+              </div>
+
+              <div><p class="common-text">Bitcoin rate</p></div>
+              <div class="d-flex align-items-center">
+                <p class="common-text me-3">Source of rate:</p>
+                <select
+                  name="bitcoin-rate"
+                  class="form-select form-select-sm common-text"
+                >
+                  <option value="bitrix">Bitrix binance</option>
+                  <option value="manual">Manual</option>
+                  <option value="custom">Custom</option>
+                </select>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <p class="common-text">$</p>
+                  <input
+                    name="bitcoin-manual-price"
+                    class="form-control form-control-sm common-text source-manual-price mx-2"
+                    type="number"
+                  />
+                  <p class="common-text">per coin</p>
+                </div>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <p class="common-text">Added fee:</p>
+                  <input
+                    placeholder="00"
+                    name="bitcoin-added-fee"
+                    class="form-control form-control-sm source-added-input common-text mx-2"
+                    type="number"
+                  />
+                  <p class="common-text">% to rates</p>
+                </div>
+              </div>
+              <div>
+                <p class="common-text">
+                  Current rate:
+                  <span data-bitcoin-current-rate>$22.345,23</span> per Btc
+                </p>
+              </div>
+
+              <div><p class="common-text">Bitcoin rate</p></div>
+              <div class="d-flex align-items-center">
+                <p class="common-text me-3">Source of rate:</p>
+                <select
+                  name="bitcoin-rate"
+                  class="form-select form-select-sm common-text"
+                >
+                  <option value="bitrix">Bitrix binance</option>
+                  <option value="manual">Manual</option>
+                  <option value="custom">Custom</option>
+                </select>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <p class="common-text">$</p>
+                  <input
+                    name="bitcoin-manual-price"
+                    class="form-control form-control-sm common-text source-manual-price mx-2"
+                    type="number"
+                  />
+                  <p class="common-text">per coin</p>
+                </div>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <p class="common-text">Added fee:</p>
+                  <input
+                    placeholder="00"
+                    name="bitcoin-added-fee"
+                    class="form-control form-control-sm source-added-input common-text mx-2"
+                    type="number"
+                  />
+                  <p class="common-text">% to rates</p>
+                </div>
+              </div>
+              <div>
+                <p class="common-text">
+                  Current rate:
+                  <span data-bitcoin-current-rate>$22.345,23</span> per Btc
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-flex justify-content-end">
+            <button class="btn button" type="submit">Save changes</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

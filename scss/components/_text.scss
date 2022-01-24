@@ -1,0 +1,53 @@
+.title-text {
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  color: var(--main-text-color-grey07);
+}
+
+.subtitle-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  color: var(--main-text-color-grey07);
+}
+
+.common-text {
+  font-size: 12px;
+  line-height: 1.16;
+  color: var(--main-text-color-grey07);
+}
+
+.accent-text {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+.success-text {
+  color: var(--success-color);
+}
+
+.danger-text {
+  color: var(--danger-color);
+}
+
+.warning-text {
+  color: var(--warning-color);
+}
+
+.functional-text {
+  color: var(--info-color);
+}
+
+.inactive-text {
+  color: var(--inactive-text-color-grey04);
+}
+
+.inactive-link {
+  color: var(--inactive-text-color-grey04);
+  text-decoration: none;
+  cursor: initial;
+  pointer-events: none;
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VSYS Wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <aside
+        data-menu
+        class="side-menu is-open d-flex flex-column justify-content-between"
+      >
+        <div class="arrow-button-wrapper w-100">
+          <button data-menu-button type="button" class="arrow-button btn">
+            <svg width="32" height="32" class="arrow">
+              <use href="images/icons.svg#menu-arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./wallets.html" class="nav-link nav-link--active">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-wallets"></use>
+                </svg>
+                <span class="nav-label">Wallets</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./source-of-rates.html" class="nav-link">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-source-rates"></use>
+                </svg>
+                <span class="nav-label">Source of rates</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./transactions.html" class="nav-link">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-transactions"></use>
+                </svg>
+                <span class="nav-label">Transactions</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">
+                <svg height="32" width="32" class="nav-icon">
+                  <use href="images/icons.svg#menu-logout"></use>
+                </svg>
+                <span class="nav-label">Log out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logo-thumb">
+          <img
+            class="menu-logo-big menu-logo align-self-center"
+            width="151"
+            src="./images/vsys-logo.png"
+            alt=""
+          />
+          <img
+            class="menu-logo-small menu-logo align-self-center"
+            width="80"
+            src="./images/vsys-logo-small.png"
+            alt=""
+          />
+        </div>
+      </aside>
+      <div class="content-container px-5 py-4">
+        <div class="row">
+          <div class="col">
+            <h1 class="title-text">Wallets</h1>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap wallets-container">
+          <div class="card">
+            <div class="card-body card-box">
+              <svg class="currency-logo" width="48" height="48">
+                <use href="./images/icons.svg#wallets-bitcoin"></use>
+              </svg>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Server:</p>
+                <p class="common-text success-text">synchronised</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Wallet status:</p>
+                <p class="common-text success-text">Active</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Cryptocurency:</p>
+                <p class="common-text">6.46685643</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Exchange rates:</p>
+                <p class="common-text">Onamae</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">USD equivalent:</p>
+                <p class="common-text">$63895</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Payout policy:</p>
+                <p class="common-text success-text">Once per hour</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">API token:</p>
+                <p class="common-text">1238549-23094</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">API URL:</p>
+                <p class="common-text">http://whateve...</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <a href="./bitcoin-wallet.html" class="card-link common-text">
+                  <svg class="card-icon" width="16" height="16">
+                    <use href="./images/icons.svg#gearsix-icon"></use>
+                  </svg>
+                  Manage
+                </a>
+                <a href="./create-payout.html" class="card-link common-text">
+                  <svg class="card-icon" width="16" height="16">
+                    <use href="./images/icons.svg#circledollar-icon"></use>
+                  </svg>
+                  Payout
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body card-box">
+              <svg class="currency-logo" width="48" height="48">
+                <use href="./images/icons.svg#wallets-litecoin"></use>
+              </svg>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Server:</p>
+                <p class="common-text .danger-text">1.000.000 blocks behind</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Wallet status:</p>
+                <p class="common-text inactive-text">Inactive</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Cryptocurency:</p>
+                <p class="common-text">5863. 46634523</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Exchange rates:</p>
+                <p class="common-text">Onamae</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">USD equivalent:</p>
+                <p class="common-text">$3895</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Payout policy:</p>
+                <p class="common-text danger-text">Off</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">API token:</p>
+                <p class="common-text">1238549-23094</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">API URL:</p>
+                <p class="common-text">http://whateve...</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <a href="#" class="card-link common-text">
+                  <svg class="card-icon" width="16" height="16">
+                    <use href="./images/icons.svg#gearsix-icon"></use>
+                  </svg>
+                  Manage
+                </a>
+                <a href="#" class="card-link common-text">
+                  <svg class="card-icon" width="16" height="16">
+                    <use href="./images/icons.svg#circledollar-icon"></use>
+                  </svg>
+                  Payout
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body card-box">
+              <svg class="currency-logo" width="48" height="48">
+                <use href="./images/icons.svg#wallets-dogecoin"></use>
+              </svg>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Server:</p>
+                <p class="common-text inactive-text">Does not exist</p>
+              </div>
+              <div class="d-flex justify-content-between info-content">
+                <p class="common-text">Wallet status:</p>
+                <p class="common-text inactive-text">Inactive</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <a href="#" class="card-link common-text">
+                  <svg class="card-icon" width="16" height="16">
+                    <use href="./images/icons.svg#gearsix-icon"></use>
+                  </svg>
+                  Manage
+                </a>
+                <a href="#" class="card-link common-text card-link--inactive">
+                  <svg class="card-icon" width="16" height="16">
+                    <use href="./images/icons.svg#circledollar-icon"></use>
+                  </svg>
+                  Payout
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row"></div>
+      </div>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

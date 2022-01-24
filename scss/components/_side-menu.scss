@@ -1,0 +1,127 @@
+.side-menu {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-width: 100px;
+  padding: 32px 0 64px;
+  background-color: var(--secondary-bcg-color-grey01);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+  transition: min-width 250ms linear;
+
+  &.is-open {
+    min-width: 256px;
+
+    .nav-label {
+      position: absolute;
+      opacity: 1;
+      transform: translateX(0%) scale(1);
+    }
+
+    .arrow-button {
+      transform: translateX(225%);
+    }
+
+    .menu-logo-big {
+      opacity: 1;
+    }
+
+    .menu-logo-small {
+      opacity: 0;
+    }
+
+    .nav-link--active {
+      .nav-icon {
+        fill: var(--accent-color);
+      }
+    }
+  }
+}
+
+.arrow-button-wrapper {
+  position: relative;
+}
+
+.arrow-button {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: scaleX(-1) translateX(50%);
+  transition: transform 250ms linear;
+  padding: 0;
+}
+
+.arrow {
+  fill: var(--input-placeholder-color-grey05);
+}
+
+.nav-list {
+  padding: 0 36px 0;
+  margin-bottom: 0;
+
+  .nav-item {
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    padding: 0;
+    color: var(--main-text-color-grey07);
+    font-size: 16px;
+
+    &:focus {
+      outline: 3px solid var(--focus-btn-color);
+      border-radius: 5px;
+    }
+
+    &.nav-link--active {
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+
+  .nav-label {
+    position: absolute;
+    top: 4px;
+    display: inline-block;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.7);
+    transition: transform 250ms linear, opacity 100ms linear;
+  }
+
+  .nav-icon {
+    z-index: 100;
+    position: relative;
+    display: inline-block;
+    fill: var(--accent-color);
+    margin-right: 15px;
+  }
+
+  .nav-link--active {
+    .nav-icon {
+      fill: var(--focus-btn-color);
+    }
+  }
+}
+
+.logo-thumb {
+  position: relative;
+}
+
+.menu-logo {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transition-delay: 100ms;
+}
+
+.menu-logo-big {
+  opacity: 0;
+}
+
+.menu-logo-small {
+  opacity: 1;
+}

@@ -1,0 +1,79 @@
+.wallets-container {
+  column-gap: 30px;
+  row-gap: 40px;
+}
+
+.card-box {
+  position: relative;
+  width: 312px;
+  background-color: var(--secondary-bcg-color-grey01);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+  padding: 32px;
+}
+
+.currency-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  border: none;
+  outline: none;
+}
+
+.card-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--accent-color);
+  padding: 9px 24px;
+  border-radius: 50px;
+
+  &:hover {
+    color: var(--hover-btn-color);
+  }
+
+  &:active {
+    color: var(--active-btn-color);
+  }
+
+  &:focus {
+    color: var(--accent-color);
+    box-shadow: none;
+    outline: 1px solid var(--focus-btn-color);
+  }
+}
+
+.card-link + .card-link {
+  margin: 0px;
+}
+
+.card-link--inactive {
+  color: var(--inactive-text-color-grey04);
+
+  &:hover {
+    color: var(--inactive-text-color-grey04);
+    cursor: initial;
+  }
+
+  &:active {
+    color: var(--inactive-text-color-grey04);
+  }
+
+  &:focus {
+    color: var(--inactive-text-color-grey04);
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.info-content:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  fill: currentColor;
+  margin-right: 4px;
+}

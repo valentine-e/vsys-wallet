@@ -1,0 +1,50 @@
+.button {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+  border-radius: 100px;
+  padding: 8px 24px;
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--background-color);
+    background-color: var(--hover-btn-color);
+  }
+
+  &:active {
+    color: var(--background-color);
+    background-color: var(--active-btn-color);
+  }
+
+  &:focus {
+    color: var(--background-color);
+    background-color: var(--focus-btn-color);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background-color: var(--grey-02);
+    color: var(--inactive-text-color-grey04);
+  }
+}
+
+.button-secondary {
+  color: var(--accent-color);
+  background-color: var(--accent-secondary-color);
+
+  &:hover {
+    background-color: var(--accent-secondary-color);
+    color: var(--hover-btn-color);
+  }
+
+  &:active {
+    background-color: var(--accent-secondary-color);
+    color: var(--hover-btn-color);
+  }
+
+  &:focus {
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    border: 1px solid #9ec5fe;
+    box-shadow: none;
+  }
+}
