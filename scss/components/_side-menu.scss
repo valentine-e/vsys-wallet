@@ -125,3 +125,59 @@
 .menu-logo-small {
   opacity: 1;
 }
+
+@media screen and (max-width: 767px) {
+  .side-menu {
+    min-width: 256px;
+
+    .nav-label {
+      opacity: 1;
+      transform: translateX(0%) scale(1);
+    }
+
+    .arrow-button {
+      transform: translateX(225%);
+    }
+
+    .menu-logo-big {
+      opacity: 1;
+    }
+
+    .menu-logo-small {
+      opacity: 0;
+    }
+
+    .nav-link--active {
+      .nav-icon {
+        fill: var(--accent-color);
+      }
+    }
+
+    &.is-open {
+      min-width: 100px;
+
+      .nav-label {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.7);
+      }
+
+      .arrow-button {
+        transform: scaleX(-1) translateX(50%);
+      }
+
+      .menu-logo-big {
+        opacity: 0;
+      }
+
+      .menu-logo-small {
+        opacity: 1;
+      }
+
+      .nav-link--active {
+        .nav-icon {
+          fill: var(--focus-btn-color);
+        }
+      }
+    }
+  }
+}

@@ -169,6 +169,47 @@ a {
   opacity: 1;
 }
 
+@media screen and (max-width: 767px) {
+  .side-menu {
+    min-width: 256px;
+  }
+  .side-menu .nav-label {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
+  .side-menu .arrow-button {
+    transform: translateX(225%);
+  }
+  .side-menu .menu-logo-big {
+    opacity: 1;
+  }
+  .side-menu .menu-logo-small {
+    opacity: 0;
+  }
+  .side-menu .nav-link--active .nav-icon {
+    fill: var(--accent-color);
+  }
+  .side-menu.is-open {
+    min-width: 100px;
+  }
+  .side-menu.is-open .nav-label {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.7);
+  }
+  .side-menu.is-open .arrow-button {
+    transform: scaleX(-1) translateX(50%);
+  }
+  .side-menu.is-open .menu-logo-big {
+    opacity: 0;
+  }
+  .side-menu.is-open .menu-logo-small {
+    opacity: 1;
+  }
+  .side-menu.is-open .nav-link--active .nav-icon {
+    fill: var(--focus-btn-color);
+  }
+}
+
 .title-text {
   white-space: nowrap;
   font-weight: 500;
@@ -408,6 +449,14 @@ input {
 .wallets-container {
   column-gap: 30px;
   row-gap: 40px;
+}
+
+.wallets-title__wrapper {
+  column-gap: 30px;
+}
+
+.w-312 {
+  width: 312px;
 }
 
 .card-box {
