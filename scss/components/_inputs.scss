@@ -57,7 +57,8 @@ input {
     color: var(--input-placeholder-color-grey05);
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     outline: 1px solid var(--hover-btn-color);
     box-shadow: none;
   }
@@ -65,11 +66,6 @@ input {
   &:focus {
     outline: 1px solid var(--focus-btn-color);
     box-shadow: none;
-  }
-
-  &:active {
-    background: var(--grey-02);
-    outline: 1px solid #dee2e6;
   }
 
   &:disabled {
