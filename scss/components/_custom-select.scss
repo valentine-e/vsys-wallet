@@ -1,15 +1,17 @@
-.select-box {
-  position: relative;
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  font-size: 12px;
-  color: var(--main-text-color-grey07);
-
+.select {
+  min-width: 161px;
   outline: 1px solid var(--grey-02);
-  border: 1px solid #ced4da;
+  font-size: 12px;
+  line-height: 1.2;
+  position: relative;
+  background-color: var(--secondary-bcg-color-grey01);
 
-  &:hover {
+  &.is-active .select__body {
+    display: block;
+  }
+
+  &:hover,
+  &:active {
     outline: 1px solid var(--hover-btn-color);
     box-shadow: none;
   }
@@ -19,115 +21,52 @@
     box-shadow: none;
   }
 
-  &:active {
-    background: var(--grey-02);
-    outline: 1px solid var(--hover-btn-color);
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
   }
 
-  &:disabled {
-    background-color: var(--grey-02);
-    color: var(--inactive-text-color-grey04);
+  &-arrow__icon {
+    flex-shrink: 0;
+    margin-right: 8px;
   }
 
   &__current {
-    position: relative;
-    cursor: pointer;
-    outline: none;
-
-    &:focus {
-      & + .select-box__list {
-        opacity: 1;
-
-        // We have to set "animation-name: none;" to make the list visible (read below how it works)
-
-        animation-name: none;
-
-        .select-box__option {
-          cursor: pointer;
-        }
-      }
-
-      .select-box__icon {
-        transform: translateY(-50%) rotate(180deg);
-      }
-    }
+    padding: 9px;
   }
 
-  &__icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    transition: 0.2s ease;
-  }
-
-  &__value {
-    display: flex;
-  }
-
-  &__input {
+  &__body {
     display: none;
-
-    &:checked + .select-box__input-text {
-      display: block;
-    }
-  }
-
-  &__input-text {
-    display: none;
-    width: 100%;
-    margin: 0;
-    padding: 9px 32px 9px 8px;
     background-color: var(--secondary-bcg-color-grey01);
-  }
-
-  &__list {
     position: absolute;
-    width: 100%;
-    padding: 0;
-    list-style: none;
-    opacity: 0;
-
-    // We need to use animation with delay.
-    // Otherwise the click event will not have time to run on label, because this element disapears immediately when .select-box__current element loses the focus.
-    // This delay will not be noticed because we set "opacity" to "0".
-    // We also use "animation-fill-mode: forwards" to make the list stay hidden.
-
-    animation-name: HideList;
-    animation-duration: 0.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: step-start;
-    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+    top: 100%;
+    left: 0;
+    right: 0;
+    outline: 1px solid var(--grey-02);
   }
 
   &__item {
-    background-color: var(--secondary-bcg-color-grey01);
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--hover-btn-color);
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+    padding: 9px;
+    overflow: hidden;
   }
 
   .delete-button {
     padding-left: 10px;
-    padding-right: 18px;
+    padding-right: 10px;
     background-color: inherit;
     border: none;
-  }
-
-  &__option {
-    display: block;
-    padding: 9px;
-
-    &:hover,
-    &:focus {
-      color: var(--hover-btn-color);
-    }
-  }
-}
-
-@keyframes HideList {
-  from {
-    transform: scaleY(1);
-  }
-  to {
-    transform: scaleY(0);
   }
 }
